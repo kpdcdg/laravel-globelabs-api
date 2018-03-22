@@ -5,11 +5,16 @@ namespace Globe;
 use GuzzleHttp\Client;
 
 class GlobeApi {
+	public $sender;
+	public $access_token;
+
 	protected $client;
 
 	public function __construct(Client $client)
 	{
 		$this->client = $client;
+		$this->sender = env('GLOBE_SENDER');
+		$this->access_token = env('GLOBE_ACCESS_TOKEN');
 	}
 
 	public function send($number, $message)
@@ -23,7 +28,7 @@ class GlobeApi {
 			]
 		];
 
-		$response = $this->client->post('', $params);
+		$response = $this->client->post('outbound/' . $this->sender . '/requests?access_token=' . $this->access_token, $params);
 
 		return $response->getBody();
 	}
