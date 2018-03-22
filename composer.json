@@ -1,0 +1,30 @@
+{
+    "name": "kpdcdg/laravel-globelabs-api",
+    "description": "A Laravel package for globelabs/globe-connect-php",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "php": "^7.0",
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kurt Dacudag",
+            "email": "kurtperaldacudag@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Globe\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Globe\\GlobeServiceProvider"
+            ],
+            "aliases": {
+                "Globe": "Globe\\Globe"
+            }
+        }
+    }
+}
