@@ -6,8 +6,8 @@ use GuzzleHttp\Client;
 use Illuminate\Support\ServiceProvider;
 
 class GlobeServiceProvider extends ServiceProvider {
-	protected $sender = config('globe.sender');
-	protected $access_token = config('globe.access_token');
+	protected $sender = env('GLOBE_SENDER');
+	protected $access_token = env('GLOBE_ACCESS_TOKEN');
 
 	public function register()
 	{
