@@ -21,7 +21,7 @@ class GlobeApi {
 	{
 		$params = [
 			'form_params' => [
-				'outboundSMSTextMessage' => $message,
+				'message' => $message,
 				'address' => $number
 			]
 		];
