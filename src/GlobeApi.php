@@ -13,8 +13,8 @@ class GlobeApi {
 	public function __construct(Client $client)
 	{
 		$this->client = $client;
-		$this->sender = env('GLOBE_SENDER');
-		$this->access_token = env('GLOBE_ACCESS_TOKEN');
+		$this->sender = config('globe.sender');
+		$this->access_token = config('globe.access_token');
 	}
 
 	public function send($number, $message)
