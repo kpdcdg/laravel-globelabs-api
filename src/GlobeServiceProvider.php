@@ -5,7 +5,8 @@ namespace Globe;
 use GuzzleHttp\Client;
 use Illuminate\Support\ServiceProvider;
 
-class GlobeServiceProvider extends ServiceProvider {
+class GlobeServiceProvider extends ServiceProvider
+{
 	public function register()
 	{
 		$this->app->singleton('globe', function() {

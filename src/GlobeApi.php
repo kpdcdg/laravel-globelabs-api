@@ -4,7 +4,8 @@ namespace Globe;
 
 use GuzzleHttp\Client;
 
-class GlobeApi {
+class GlobeApi
+{
 	public $sender;
 	public $access_token;
 
