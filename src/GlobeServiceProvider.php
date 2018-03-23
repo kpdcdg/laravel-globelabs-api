@@ -21,7 +21,7 @@ class GlobeServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->publishes([
-	        __DIR__.'/config/globe.php' => config_path('globe.php'),
+	        __DIR__.'\config\globe.php' => config_path('globe.php'),
 	    ]);
 	}
 }
