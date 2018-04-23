@@ -11,7 +11,6 @@ class GlobeServiceProvider extends ServiceProvider
 	{
 		$this->app->singleton('globe', function() {
 			$client = new Client([
-				// 'base_uri' => 'https://devapi.globelabs.com.ph/smsmessaging/v1/outbound/' . $this->sender . '/requests?access_token=' . $this->access_token
 				'base_uri' => 'https://devapi.globelabs.com.ph/smsmessaging/v1/'
 			]);
 
