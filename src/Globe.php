@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Facade;
 
 class Globe extends Facade
 {
-	public static function getFacadeAccessor()
+	protected static function getFacadeAccessor()
 	{
 		return 'globe';
 	}
