@@ -24,7 +24,7 @@ class GlobeApi
 				'address' => $number,
 				'message' => $message,
 				'passphrase' => $passphrase,
-				'app_id' => $app_id
+				'app_id' => $app_id,
 				'app_secret' => $app_secret,
 			]
 		];
