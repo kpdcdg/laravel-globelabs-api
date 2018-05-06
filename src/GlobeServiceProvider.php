@@ -18,7 +18,8 @@ class GlobeServiceProvider extends ServiceProvider
 			$short_code = $config['short_code'];
 			
 			$client = new Client([
-				'base_uri' => 'https://devapi.globelabs.com.ph/smsmessaging/v1/'
+				'base_uri' => 'https://devapi.globelabs.com.ph/smsmessaging/' .
+					'v1/outbound/' . $short_code . '/'
 			]);
 
 			return new GlobeApi($client);
