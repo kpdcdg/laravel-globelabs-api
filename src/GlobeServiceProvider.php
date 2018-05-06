@@ -13,6 +13,10 @@ class GlobeServiceProvider extends ServiceProvider
 	public function register()
 	{
 		$this->app->singleton('globe', function(Container $app) {
+			$config = $app->make('config')->get('globe');
+
+			$short_code = $config['short_code'];
+			
 			$client = new Client([
 				'base_uri' => 'https://devapi.globelabs.com.ph/smsmessaging/v1/'
 			]);
