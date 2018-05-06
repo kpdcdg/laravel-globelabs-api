@@ -2,7 +2,7 @@
 
 namespace Globe;
 
-use Globe\Traits\SendsSms;
+use Globe\Traits\Sms;
 use GuzzleHttp\Client;
 
 class GlobeApi
