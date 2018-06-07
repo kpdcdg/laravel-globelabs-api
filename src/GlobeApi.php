@@ -6,18 +6,16 @@ use GuzzleHttp\Client;
 
 class GlobeApi
 {
-	protected $shortcode, $client;
+	protected $client;
 
 	public function __construct(Client $client)
 	{
 		$this->client = $client;
-
-		$this->short_code = config('globe.short_code');
 	}
 
-	public function send($number, $message, $passphrase, $app_id, $app_secret)
+	public function send($number, $message, $passphrase, $app_id, $app_secret, $short_code)
 	{
-		$url = 'outbound/' . $this->short_code . '/requests/';
+		$url = 'outbound/' . $short_code . '/requests/';
 		
 		$params = [
 			'form_params' => [
