@@ -1,6 +1,6 @@
 {
     "name": "kpdcdg/laravel-globelabs-api",
-    "description": "A Laravel package for globelabs/globe-connect-php",
+    "description": "A Laravel package for GlobeLabs API",
     "require": {
         "guzzlehttp/guzzle": "^6.3",
         "illuminate/contracts": "5.5.*|5.6.*",
